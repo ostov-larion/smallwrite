@@ -1,0 +1,2 @@
+# smallwrite
+Educational project
