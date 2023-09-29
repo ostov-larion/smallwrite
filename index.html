@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Smallwrite</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href="css/icons.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/markdown-it.min.js"></script>
+    <script src="js/fuse.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <section title="Домой" onclick="location.href = '#feed'">
+          <span class="logo">S.</span>
+          <strong>smallwrite</strong>
+        </section>
+        <section>
+          <input type="search" placeholder="Поиск" onchange="search(this.value)"/>
+          <button title="Добавить статью" onclick="location.href = '#editor'"><span class="icon">add</span></button>
+        </section>
+      </nav>
+    </header>
+
+    <div id="loader" class="lds-ripple"><div></div><div></div></div>
+
+    <main>
+
+      <section id="reader">
+      </section>
+
+      <section id="feed">
+      </section>
+
+      <section id="editor">
+        <article>
+          <header>
+            <input id="tags" type="text" placeholder="Теги"/>
+            <input id="title" type="text" placeholder="Заголовок">
+            <button onclick="sendArticle()">Отправить</button>
+            <input id="name" type="text" placeholder="Имя"/>
+            <input id="password" type="password" placeholder="Пароль"/>
+          </header>
+          <textarea id="content" placeholder="Текст статьи (поддерживает Markdown)"></textarea>
+        </article>
+      </section>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
